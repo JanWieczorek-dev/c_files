@@ -4,6 +4,10 @@
 int main() {
 
     char input_char;
-    scanf("%c", &input_char);
-    printf("%c", &input_char);
+    while (scanf("%c", &input_char) == 1 ){
+		
+		printf("%c", &input_char);
+	}
+	
 }
+
