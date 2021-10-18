@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[]){
 
-	int *int_array = malloc(atoi(argv[1]* sizeof(int))
+	int *int_array = malloc(atoi(argv[1])* sizeof(int));
 	
 	
 		
