@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[]){
 
-		int* int_array = malloc((int)(argv[1]));
+	int *int_array[*argv[1]] ;
 		
 		for (int i = 0; i < *argv[1]; i++){
 			int_array[i] = i;
