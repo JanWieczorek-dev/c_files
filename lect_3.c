@@ -4,7 +4,7 @@
 int main(int argc, char *argv[]){
 
 	int *int_array = malloc(atoi(argv[1])* sizeof(int));
-	int *ptr = &int_array;
+	int *ptr = int_array;
 	
 		int value = 0;
 		while (value < atoi(argv[1])){
