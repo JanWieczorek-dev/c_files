@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
+#define MAX_INPUT 1024
 #include <string.h> 
 
 
@@ -10,9 +10,9 @@ int writeline(const char line[]);
 
 int main() {
 
-	char input_line[INT_MAX]; 
+	char input_line[MAX_INPUT]; 
 
-	while (readline( input_line, INT_MAX)){
+	while (readline( input_line, MAX_INPUT)){
 	
 		writeline(input_line);
 	
