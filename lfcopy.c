@@ -3,11 +3,7 @@
 #include <limits.h>
 
 
-int main() {
-
-	char input_line[];
-
-	int readline(char line[], int max){
+int readline(char line[], int max){
 
 		if (fgets(line, max, stdin) == NULL)
 			return 0;
@@ -24,8 +20,11 @@ int main() {
 	}
 
 
+int main() {
 
-	while (readline(input_line, INT_MAX) != 0){
+	char input_line[INT_MAX]; 
+
+	while (readline( input_line, INT_MAX) != 0){
 	
 		writeline(input_line)
 	}
