@@ -33,7 +33,7 @@ int main() {
 	
 		writeline(input_line);
 	
-	return 0
+	return 0;
 	}
 	
 	
