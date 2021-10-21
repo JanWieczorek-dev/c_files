@@ -26,6 +26,6 @@ int main() {
 
 	while (readline( input_line, INT_MAX) != 0){
 	
-		writeline(input_line)
+		writeline(input_line);
 	}
 }
