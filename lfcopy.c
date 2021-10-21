@@ -8,6 +8,19 @@ int readline(char line[], int max);
 int writeline(const char line[]);
 
 
+int main() {
+
+	char input_line[INT_MAX]; 
+
+	while (readline( input_line, INT_MAX)){
+	
+		writeline(input_line);
+	
+	return 0;
+	}
+}
+
+
 int readline(char line[], int max)
 {
 	if (fgets(line, max, stdin) == NULL)
@@ -23,14 +36,3 @@ int writeline(const char line[])
 }
 
 
-int main() {
-
-	char input_line[INT_MAX]; 
-
-	while (readline( input_line, INT_MAX)){
-	
-		writeline(input_line);
-	
-	return 0;
-	}
-}
