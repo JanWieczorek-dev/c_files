@@ -59,13 +59,29 @@ Item q_remove(Queue *q) {
 	struct q_element *p;
 	Item i;
 
-	if (q->head == NULL)
+	if (q->head == NULL){
 		return NULL;
+	}
+	
 	p = q->head;
-	q->head = p->next;
-	if (q->head == NULL)
-		q->tail = NULL;
+	
+	if (p->next != NULL){
+		i = p-> value;
+		q->head = NULL;
+		free(p);
+		return i;
+	}	
+		
+		
+	while (p->next->next != NULL){
+		p = p->next;
+	}
+	
+	
+	struct q_element *r = p;
+	p = p->next;
 	i = p->value;
+	r->next = NULL;
 	free(p);
 	return i;
 }
