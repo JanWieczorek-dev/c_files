@@ -57,6 +57,7 @@ int q_add(Queue *q, Item i, int prio) {
  */
 Item q_remove(Queue *q) {
 	struct q_element *p;
+	struct q_element *r;
 	Item i;
 
 	if (q->head == NULL){
@@ -65,7 +66,7 @@ Item q_remove(Queue *q) {
 	
 	p = q->head;
 	
-	if (p->next != NULL){
+	if (p->next == NULL){
 		i = p-> value;
 		q->head = NULL;
 		free(p);
@@ -78,7 +79,7 @@ Item q_remove(Queue *q) {
 	}
 	
 	
-	struct q_element *r = p;
+	r = p;
 	p = p->next;
 	i = p->value;
 	r->next = NULL;
