@@ -15,7 +15,7 @@ typedef struct name name;
  
  
  int compare_last (name name1, name name2){
-	 return strcmp (name1.ast_name, name2.last_name);
+	 return strcmp (name1.last_name, name2.last_name);
  }
 
 int main() {
