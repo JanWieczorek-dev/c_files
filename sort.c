@@ -6,15 +6,15 @@ struct name {
 const char * first_name;
 const char * last_name;
 };
-typedef struct name name
+typedef struct name name;
 
 
- int compare_first (name name1, name name1){
+ int compare_first (name name1, name name2){
 	 return int strcmp (name1->first_name, name2->first_name)
  }
  
  
- int compare_last (name name1, name name1){
+ int compare_last (name name1, name name2){
 	 return int strcmp (name1->last_name, name2->last_name)
  }
 
@@ -27,7 +27,7 @@ name names[4] = {
  {"Bjarne", "Stroustrup"}
 };
 
-qsort(names, 4, sizeof(name), compare_last) 	 
+qsort(names, 4, sizeof(name), compare_last); 	 
 
 for (int i = 0; i < 4; i++){
 	printf("%s\n", names[i]->last_name)
@@ -39,4 +39,5 @@ qsort(names, 4, sizeof(name), compare_last)
 
 for (int i = 0; i < 4; i++){
 	printf("%s\n", names[i]->first_name)
+}
 }
