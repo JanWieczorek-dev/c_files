@@ -15,9 +15,9 @@ struct date
 Date *date_create(char *datestr){
 
     Date *date;
-    char* day_str[2];
-    char* month_str[2];
-    char* year_str[4];
+    char *day_str;
+    char *month_str;
+    char *year_str;
 
     for(int i = 0; i < 2; i++){
         day_str[i] = datestr[i];
