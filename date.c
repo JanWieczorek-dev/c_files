@@ -15,9 +15,9 @@ struct date
 Date *date_create(char *datestr){
 
     Date *date;
-    char* day_str;
-    char* month_str;
-    char* year_str;
+    char* day_str[2];
+    char* month_str[2];
+    char* year_str[4];
 
     for(int i = 0; i < 2; i++){
         day_str[i] = datestr[i];
@@ -32,9 +32,9 @@ Date *date_create(char *datestr){
 
     if ((date = (Date *) malloc(sizeof(int)*3))!= NULL)
     {
-        date->day = itoi(day_str);
-        date->month = itoi(month_str);
-        date->year = itoi(year_str);
+        date->day = atoi(day_str);
+        date->month = atoi(month_str);
+        date->year = atoi(year_str);
     }
     else {
         return NULL;
