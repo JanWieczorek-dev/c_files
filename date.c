@@ -15,18 +15,18 @@ struct date
 Date *date_create(char *datestr){
 
     Date *date;
-    char *day_str[2];
-    char *month_str[2];
-    char *year_str[4];
+    char day_str[2];
+    char month_str[2];
+    char year_str[4];
 
     for(int i = 0; i < 2; i++){
         day_str[i] = datestr[i];
     }
     for(int i = 3; i < 5; i++){
-        month_str[i] = datestr[i];
+        month_str[i-3] = datestr[i];
     }
     for(int i = 6; i < 10; i++){
-        year_str[i] = datestr[i];
+        year_str[i-6] = datestr[i];
     }
 
 
