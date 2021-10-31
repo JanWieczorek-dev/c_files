@@ -9,6 +9,6 @@ int main(){
 int *arr = malloc(sizeof(int)*10);
 
 
-printf("%p \n", arr);
+printf("%n \n", arr);
 
 }
