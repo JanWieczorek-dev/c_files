@@ -6,7 +6,7 @@
 
 int main(){
  
-int *arr = malloc(sizeof(int)*10;
+int *arr = malloc(sizeof(int)*10);
 
 
 printf("%d", arr[2]);
