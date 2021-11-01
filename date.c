@@ -16,9 +16,9 @@ struct date
 Date *date_create(char *datestr){
 
     Date *date;
-    char day_str[2];
-    char month_str[2];
-    char year_str[4];
+    char day_str[3];
+    char month_str[3];
+    char year_str[5];
 
     for(int i = 0; i < 2; i++){
         day_str[i] = datestr[i];
@@ -29,6 +29,10 @@ Date *date_create(char *datestr){
     for(int i = 6; i < 10; i++){
         year_str[i-6] = datestr[i];
     }
+
+    day_str[3] = '\0';
+    month_str[3] = '\0';
+    year_str[3] = '\0';
 
 
     if ((date = (Date *) malloc(sizeof(int)*3))!= NULL)
