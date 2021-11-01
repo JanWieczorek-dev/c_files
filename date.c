@@ -30,9 +30,9 @@ Date *date_create(char *datestr){
         year_str[i-6] = datestr[i];
     }
 
-    day_str[3] = '\0';
-    month_str[3] = '\0';
-    year_str[3] = '\0';
+    day_str[2] = '\0';
+    month_str[2] = '\0';
+    year_str[4] = '\0';
 
 
     if ((date = (Date *) malloc(sizeof(int)*3))!= NULL)
