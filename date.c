@@ -16,30 +16,18 @@ struct date
 Date *date_create(char *datestr){
 
     Date *date;
-    char day_str[3];
-    char month_str[3];
-    char year_str[5];
+    int day_;
+    int month_;
+    int year_;
 
-    for(int i = 0; i < 2; i++){
-        day_str[i] = datestr[i];
-    }
-    for(int i = 3; i < 5; i++){
-        month_str[i-3] = datestr[i];
-    }
-    for(int i = 6; i < 10; i++){
-        year_str[i-6] = datestr[i];
-    }
 
-    day_str[2] = '\0';
-    month_str[2] = '\0';
-    year_str[4] = '\0';
-
+    sscanf(datestr, "%d/%d/%d", &day_, &month_, &year_);
 
     if ((date = (Date *) malloc(sizeof(int)*3))!= NULL)
     {
-        date->day = atoi(day_str);
-        date->month = atoi(month_str);
-        date->year = atoi(year_str);
+        date->day = day_;
+        date->month =  month_;
+        date->year = year_;
     }
     else {
         return NULL;
