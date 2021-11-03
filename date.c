@@ -21,7 +21,9 @@ Date *date_create(char *datestr){
     int year_;
 
 
-    sscanf(datestr, "%d/%d/%d", &day_, &month_, &year_);
+   if (sscanf(datestr, "%d/%d/%d", &day_, &month_, &year_) != 3){
+       return NULL;
+   }
 
     if ((date = (Date *) malloc(sizeof(int)*3))!= NULL)
     {
@@ -48,10 +50,7 @@ Date *date_duplicate(Date *d){
     else{
         return NULL;
     }
-    return date_duplicate;
-
 }
-
 int date_compare(Date *date1, Date *date2){
 
     if(date1->year > date2->year){
@@ -61,7 +60,7 @@ int date_compare(Date *date1, Date *date2){
     {
         return -1;
     }
-    
+
     if(date1->month > date2->month){
         return 1;
     }
@@ -86,3 +85,4 @@ int date_compare(Date *date1, Date *date2){
 void date_destroy(Date *d){
     free(d);
 }
+                                  
