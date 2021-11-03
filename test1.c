@@ -11,12 +11,12 @@ int main(){
     char tld[20];
     Date processed_date;
 
-    sscanf(string, "%s %*s.%*s.%s", date, tld);
+    sscanf(string, "%s %*s", date);
 
 
     processed_date = *date_create(date);
 
-    printf("%s %s", tld, date );
+    printf("%d %d %d", processed_date.day, processed_date.month, processed_date.year);
     
 
 
