@@ -15,7 +15,7 @@ int main(){
 
     while (i < 3)
     {
-        new_str[i] = tolower(str2[i]);
+        *new_str[i] = tolower(str2[i]);
         i++;
 
     }
