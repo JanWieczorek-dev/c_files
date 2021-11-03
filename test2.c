@@ -11,12 +11,13 @@ int main(){
 
     printf("%d \n", strncmp(str1, str2, 3));
 
-    for (int i = 0; i< strlen(str2); i++)
-    {
-        str2[i] = tolower(str2[1]);
-    }
+//    for (int i = 0; i< strlen(str2); i++)
+//    {
+//        str2[i] = tolower(str2[1]);
+    
+//    }
 
-    printf("%s", str2);
+//    printf("%s", str2);
 
 
 }
