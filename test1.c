@@ -11,7 +11,7 @@ int main(){
     char *tld;
     Date processed_date;
 
-    sscanf(string, "%s %s", date, tld);
+    sscanf(string, "%s %s", &date, &tld);
 
     processed_date = *date_create(date);
 
