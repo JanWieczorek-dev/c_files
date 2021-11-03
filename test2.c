@@ -7,17 +7,20 @@
 int main(){
 
     char* str1 = "ab";
-    char* str2 = "abc";
+    char* str2 = "ABC";
+    int i =0;
 
     printf("%d \n", strncmp(str1, str2, 3));
 
-//    for (int i = 0; i< strlen(str2); i++)
-//    {
-//        str2[i] = tolower(str2[1]);
-    
-//    }
+    while (str2[i])
+    {
+        str2[i] = tolower(str2[i]);
+        i++;
 
-//    printf("%s", str2);
+    }
+    
+ 
+    printf("%s", str2);
 
 
 }
