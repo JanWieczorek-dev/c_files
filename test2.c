@@ -7,7 +7,7 @@
 int main(){
 
     char* str1 = "ab";
-    char* str2 = "ABC";
+    char* str2 = "abc";
 
     printf("%d \n", strncmp(str1, str2, 3));
 
