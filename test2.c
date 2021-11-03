@@ -21,7 +21,7 @@ int main(){
     }
     
  
-    printf("%s", str2);
+    printf("%s", new_str);
 
 
 }
