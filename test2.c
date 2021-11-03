@@ -12,7 +12,7 @@ int main(){
 
     printf("%d \n", strncmp(str1, str2, 3));
 
-    while (str2[i])
+    while (i < 3)
     {
         str2[i] = tolower(str2[i]);
         i++;
