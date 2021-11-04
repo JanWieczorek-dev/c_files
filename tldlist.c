@@ -384,7 +384,7 @@ long tldlist_count(TLDList *tld)
     TLDIterator* iter = tldlist_iter_create(tld);
     TLDNode* node;
 
-    while(node = tldlist_iter_next(iter))
+    while((node = tldlist_iter_next(iter)))
     {
         count += (node->entries);
     }
