@@ -1,3 +1,8 @@
+//This is my own work as defined in the Academic Ethics agreement I have signed
+//Jan Wieczorek - 2095736w - SP Assesed  Exercise 1 
+
+
+
 #include<stdio.h>
 #include <stdlib.h>
 #include "tldlist.h"
@@ -267,10 +272,11 @@ void tldlist_iter_destroy(TLDIterator *iter)
 }
 
 
-//iterate over a tree - in-order traversal - I'm not sure how to implement the iterator 
+//iterate over a tree - post-order traversal - I'm not sure how to implement the iterator 
 //so that it works on all ADTs - this one is only suitable for a BST
+//- or rather it could suitable be if it worked
 
-//helper fuctions - to avoid to many nested if and repeated branches without risking dereferncing a null pointer
+//helper fuctions - to avoid too many nested ifs and repeated branches without risking dereferncing a null pointer
 
 bool check_left (TLDNode* node)
 {
@@ -320,7 +326,7 @@ TLDNode *tldlist_iter_next(TLDIterator *iter)
         return NULL;
     }
 
-//iterate through the tree util a suitable node is found    
+//iterate over the tree until a suitable node is found    
     while(true)
     {
 //reached the end of the BST - return NULL
@@ -331,7 +337,7 @@ TLDNode *tldlist_iter_next(TLDIterator *iter)
         }
 //traverse the tree
 
-//check if there are any unvsited nodes on the left if so go down the left branch
+//check if there are any unvisited nodes on the left if so go down the left branch
         if (check_left(curr_node))
         {
             curr_node = curr_node->left_child;
@@ -376,9 +382,11 @@ long tldlist_count(TLDList *tld)
 {
     count = 0;
     TLDIterator* iter = tldlist_iter_create(tld);
-    while( tldlist_iter_next(iter))
+    TLDNode* node;
+
+    while(node = tldlist_iter_next(iter))
     {
-        count += (tldlist_iter_next(iter)->entries);
+        count += (node->entries);
     }
     tldlist_iter_destroy(iter);
     return count;
