@@ -99,6 +99,10 @@ void tldlist_destroy(TLDList *tld)
     {
         curr_node = tld ->root;
     }
+    else
+    {
+        return;
+    }
 
     if (curr_node) {
         destroy_nodes(curr_node->left_child);
