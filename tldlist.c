@@ -395,7 +395,7 @@ char *tldnode_tldname(TLDNode *node)
     }
     else
     {
-        return;
+        return NULL;
     }
 
 }
@@ -408,7 +408,7 @@ long tldnode_count(TLDNode *node)
     }
     else
     {
-        return
+        return 0;
     }
 }
 
