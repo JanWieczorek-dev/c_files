@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include <stdlib.h>
 #include "tldlist.h"
-#include "date.c"
+#include "date.h"
 #include <ctype.h>
 #include <string.h>
 #include <stdbool.h>
@@ -22,8 +22,8 @@ struct tldnode
 
 struct tldlist
 {
-    Date start;
-    Date finish;
+    Date* start;
+    Date* finish;
     TLDNode *root;
 };
 
@@ -44,8 +44,8 @@ TLDList *tldlist_create(Date *begin, Date *end)
     TLDList *list = malloc(sizeof(TLDList));
     if (list)
     {
-        list ->start = *begin;
-        list ->finish = *end;
+        list ->start = begin;
+        list ->finish = end;
         list ->root = NULL;
         return list;
     }
@@ -131,7 +131,7 @@ int tldlist_add(TLDList *tld, char *hostname, Date *d)
 
 
     // check if dates are within the range 
-    if ( date_compare(&(tld ->start), d) > 0  ||  date_compare(&(tld ->finish), d) < 0)
+    if ( date_compare((tld ->start), d) > 0  ||  date_compare((tld ->finish), d) < 0)
     {
         return 0;
     }
