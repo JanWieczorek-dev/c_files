@@ -25,9 +25,9 @@ Date *date_create(char *datestr){
         return NULL;
    }
 
+    date = (Date *) malloc(sizeof(int)*3);
 
-
-    if ((date = (Date *) malloc(sizeof(int)*3))!= NULL)
+    if (date)
     {
         date->day = day_;
         date->month =  month_;
