@@ -281,6 +281,7 @@ bool check_left (TLDNode* node)
     {
         return false;
     }
+    return true;
 }
 
 bool check_right (TLDNode* node)
@@ -293,6 +294,7 @@ bool check_right (TLDNode* node)
     {
         return false;
     }
+    return true;
 }
 
 
@@ -391,6 +393,10 @@ char *tldnode_tldname(TLDNode *node)
     {
         return node->tldname;
     }
+    else
+    {
+        return;
+    }
 
 }
 
@@ -399,6 +405,10 @@ long tldnode_count(TLDNode *node)
     if (node)
     {
         return node->entries;
+    }
+    else
+    {
+        return
     }
 }
 
