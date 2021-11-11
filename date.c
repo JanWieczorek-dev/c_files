@@ -4,7 +4,6 @@
 #include <string.h>
 #include "date.h"
 
-int main(){}
 
 typedef struct date
 {
