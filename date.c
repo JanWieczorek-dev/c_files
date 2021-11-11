@@ -4,7 +4,7 @@
 #include <string.h>
 #include "date.h"
 
-struct Date
+struct date
 {
     int year;
     int month;
