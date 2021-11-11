@@ -1,5 +1,4 @@
-#ifndef _DATE_H_INCLUDED_
-#define _DATE_H_INCLUDED_
+
 #include <stdlib.h>
 #include <string.h>
 #include "date.h"
@@ -107,4 +106,3 @@ void date_destroy(Date *d)
     free(d);
 }
 
-#endif /* _DATE_H_INCLUDED_ */
