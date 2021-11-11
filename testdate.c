@@ -1,4 +1,5 @@
 #include "date.h"
+#include "date.c"
 #include <stdio.h>
 
 static char *testString[] = {
