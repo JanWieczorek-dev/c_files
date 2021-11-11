@@ -1,16 +1,17 @@
-
+#ifndef _DATE_H_INCLUDED_
+#define _DATE_H_INCLUDED_
 #include <stdlib.h>
 #include <string.h>
 #include "date.h"
 
-struct date
+typedef struct date
 {
     int year;
     int month;
     int day;
-};
+}date;
 
-
+typedef struct date Date;
 
 /*
 * date_create creates a Date structure from `datestr`
@@ -106,3 +107,4 @@ void date_destroy(Date *d)
     free(d);
 }
 
+#endif /* _DATE_H_INCLUDED_ */
